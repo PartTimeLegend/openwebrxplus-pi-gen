@@ -16,8 +16,8 @@ function cmakebuild() {
 
 pushd /tmp
 
-git clone --depth 1 https://github.com/SDRplay/SoapySDRPlay.git
-cmakebuild SoapySDRPlay
+git clone --depth 1 https://github.com/pothosware/SoapySDRPlay3.git
+cmakebuild SoapySDRPlay3
 ldconfig
 
 popd
