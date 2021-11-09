@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-apt-get -y purge --autoremove soapysdr0.6-module-lms7
+apt-get -y purge --autoremove soapysdr0.7-module-lms7
 
 pushd /tmp
 
