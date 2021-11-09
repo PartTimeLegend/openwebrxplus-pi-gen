@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-DEB=wsjtx_2.5.2_armhf.deb
+#DEB=wsjtx_2.5.2_armhf.deb
 
-apt-get -y purge --autoremove wsjtx wsjtx-data
+#apt-get -y purge --autoremove wsjtx wsjtx-data
 
-pushd /tmp
-wget http://physics.princeton.edu/pulsar/k1jt/$DEB
-dpkg -i $DEB
-rm $DEB
-popd
+#pushd /tmp
+#wget https://physics.princeton.edu/pulsar/k1jt/$DEB
+#dpkg -i $DEB
+#rm $DEB
+#popd
