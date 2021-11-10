@@ -1,7 +1,7 @@
 --- stage3.orig/rootfs/etc/varnish/default.vcl	2019-10-05 23:52:57.084429607 +0200
 +++ stage3/rootfs/etc/varnish/default.vcl	2019-10-05 23:59:11.517818140 +0200
 @@ -13,23 +13,22 @@
- vcl 4.0;
+ vcl 4.1;
  
  # Default backend definition. Set this to point to your content server.
 -backend default {
@@ -47,12 +47,12 @@
 diff -ur stage3.orig/rootfs/lib/systemd/system/varnish.service stage3/rootfs/lib/systemd/system/varnish.service
 --- stage3.orig/rootfs/lib/systemd/system/varnish.service	2019-10-05 23:52:57.301094337 +0200
 +++ stage3/rootfs/lib/systemd/system/varnish.service	2019-10-05 23:55:15.786547902 +0200
-@@ -6,7 +6,7 @@
- Type=simple
- LimitNOFILE=131072
- LimitMEMLOCK=82000
--ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a :6081 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
-+ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a localhost:6081 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
- ExecReload=/usr/share/varnish/varnishreload
- ProtectSystem=full
- ProtectHome=true
+@@ -16,7 +16,7 @@
+ ExecStart=/usr/sbin/varnishd \
+           -j unix,user=vcache \
+           -F \
+-          -a :6081 \
++          -a localhost:6081 \
+           -T localhost:6082 \
+           -f /etc/varnish/default.vcl \
+           -S /etc/varnish/secret \
