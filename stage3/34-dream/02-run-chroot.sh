@@ -7,7 +7,7 @@ wget https://downloads.sourceforge.net/project/drm/dream/2.1.1/dream-2.1.1-svn80
 tar xvfz dream-2.1.1-svn808.tar.gz
 pushd dream
 patch -Np0 < ../dream.patch
-qmake CONFIG+=console
+qmake -qt=qt5 CONFIG+=console
 make
 make install
 popd
