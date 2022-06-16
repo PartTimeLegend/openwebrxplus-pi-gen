@@ -2,9 +2,9 @@
 set -euo pipefail
 
 install -m 644 files/openwebrx.list "${ROOTFS_DIR}/etc/apt/sources.list.d/"
-install -m 644 files/openwebrx-experimental.list "${ROOTFS_DIR}/etc/apt/sources.list.d/"
 
-on_chroot apt-key add - < files/openwebrx.gpg.key
+gpg --dearmor < files/openwebrx.gpg.key > "${ROOTFS_DIR}/usr/share/keyrings/openwebrx.gpg"
+
 on_chroot << EOF
 apt-get update
 EOF
