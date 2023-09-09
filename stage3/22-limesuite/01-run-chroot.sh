@@ -5,9 +5,8 @@ apt-get -y purge --autoremove soapysdr0.7-module-lms7
 
 pushd /tmp
 
-git clone https://github.com/myriadrf/LimeSuite.git
+git clone -b stable --depth 1 https://github.com/myriadrf/LimeSuite.git
 pushd LimeSuite
-git checkout stable
 mkdir builddir
 pushd builddir
 cmake .. -DENABLE_EXAMPLES=OFF -DENABLE_DESKTOP=OFF -DENABLE_LIME_UTIL=OFF -DENABLE_QUICKTEST=OFF -DENABLE_OCTAVE=OFF -DENABLE_GUI=OFF -DCMAKE_CXX_STANDARD_LIBRARIES="-latomic"
