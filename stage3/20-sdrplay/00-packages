@@ -1,3 +1,9 @@
 libusb-1.0-0-dev
 libsoapysdr-dev
 soapysdr-tools
+soapysdr-module-all
+soapysdr-module-sdrplay3
+libhidapi-libusb0
+libiio0
+libad9361-0
+libfaad2

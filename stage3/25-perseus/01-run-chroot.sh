@@ -22,4 +22,4 @@ popd
 usermod -a -G perseususb openwebrx
 usermod -a -G perseususb pi
 
-apt-get -y purge ${BUILD_PACKAGES}
+#apt-get -y purge ${BUILD_PACKAGES}

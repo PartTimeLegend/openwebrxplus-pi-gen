@@ -9,3 +9,16 @@ cat << EOF > "${ROOTFS_DIR}/etc/openwebrx/openwebrx.conf.d/20-temporary-director
 [core]
 temporary_directory = /tmp/openwebrx
 EOF
+
+cp files/profile-owrx.sh "${ROOTFS_DIR}/etc/profile.d/owrx.sh"
+cp files/install-softmbe.sh "${ROOTFS_DIR}/usr/local/bin"
+chmod +x "${ROOTFS_DIR}/usr/local/bin"
+
+cat > "${ROOTFS_DIR}/etc/modprobe.d/openwebrx.conf" << _EOF_
+blacklist dvb_usb_rtl28xxu
+blacklist sdr_msi3101
+blacklist msi001
+blacklist msi2500
+blacklist hackrf
+_EOF_
+

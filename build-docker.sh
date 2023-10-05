@@ -155,6 +155,7 @@ time ${DOCKER} run \
   "${DOCKER_CMDLINE_POST[@]}" \
   pi-gen \
   bash -e -o pipefail -c "
+    mount -o remount,dev /pi-gen/work &&
     dpkg-reconfigure qemu-user-static &&
     # binfmt_misc is sometimes not mounted with debian bullseye image
     (mount binfmt_misc -t binfmt_misc /proc/sys/fs/binfmt_misc || true) &&
@@ -168,6 +169,7 @@ echo "copying results from deploy/"
 ${DOCKER} cp "${CONTAINER_NAME}":/pi-gen/deploy - | tar -xf -
 
 echo "copying log from container ${CONTAINER_NAME} to depoy/"
+mkdir -p deploy
 ${DOCKER} logs --timestamps "${CONTAINER_NAME}" &>deploy/build-docker.log
 
 ls -lah deploy
