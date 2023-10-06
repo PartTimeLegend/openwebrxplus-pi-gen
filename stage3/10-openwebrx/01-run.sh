@@ -12,7 +12,7 @@ EOF
 
 cp files/profile-owrx.sh "${ROOTFS_DIR}/etc/profile.d/owrx.sh"
 cp files/install-softmbe.sh "${ROOTFS_DIR}/usr/local/bin"
-chmod +x "${ROOTFS_DIR}/usr/local/bin"
+chmod +x "${ROOTFS_DIR}/usr/local/bin/install-softmbe.sh"
 
 cat > "${ROOTFS_DIR}/etc/modprobe.d/openwebrx.conf" << _EOF_
 blacklist dvb_usb_rtl28xxu
