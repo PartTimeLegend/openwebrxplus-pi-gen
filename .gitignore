@@ -7,3 +7,7 @@ SKIP_IMAGES
 *-pc
 apt-cacher-ng/
 .idea
+*.zip
+*.info
+build.log
+.vscode/
