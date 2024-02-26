@@ -1,0 +1,5 @@
+libusb-1.0-0-dev
+git
+cmake
+debhelper
+sudo
