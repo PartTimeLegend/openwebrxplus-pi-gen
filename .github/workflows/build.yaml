@@ -1,0 +1,15 @@
+name: build
+on: 
+  push:
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: apt
+        run: sudo apt-get -y update && sudo apt-get -y install quilt qemu-user-static debootstrap libarchive-tools qemu-utils
+      - name: script
+        run: sudo ./build.sh
+        shell: bash
+      
