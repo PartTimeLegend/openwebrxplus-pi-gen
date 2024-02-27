@@ -1,0 +1,13 @@
+name: build
+on: 
+  push:
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: script
+        run: ./build.sh
+        shell: bash
+      
