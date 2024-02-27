@@ -153,7 +153,7 @@ UNRELEASED:
   * Raspberry Pi firmware c6d56567ff6ef17fd85159770f22abcf2c5953ed
   * Linux kernel 5.10.92
 2021-10-30:
-  * Based on Debian version 11 (bullseye)
+  * Based on Debian version 11 (bookworm)
   * Desktop components (lxpanel and all plugins, libfm, pcmanfm) now built against GTK+3
   * Applications (piwiz, pipanel, rc_gui, lxinput) now built against GTK+3
   * PiXflat GTK+3 theme updated with numerous changes to support the above
@@ -184,7 +184,7 @@ UNRELEASED:
   * Progress and information dialog boxes for lxpanel plugins now common to lxpanel, rather than in individual plugins
   * Icon handling code for lxpanel plugins now common to lxpanel
   * Package with 4K version of Raspberry Pi wallpaper added to Recommended Software
-  * Python Games and Minecraft removed from Recommended Software - neither is compatible with bullseye
+  * Python Games and Minecraft removed from Recommended Software - neither is compatible with bookworm
   * Bluetooth pairing and connection dialogs updated for compatibility with more devices
   * Bluetooth devices always disconnected before removal to speed up removal process
   * Bluetooth pairing dialog now only shows devices which offer services which are usable by Pi
