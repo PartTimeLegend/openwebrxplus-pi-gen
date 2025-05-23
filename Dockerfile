@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=debian:bookworm
+ARG BASE_IMAGE=debian:12.11
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND noninteractive
